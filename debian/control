@@ -1,0 +1,51 @@
+Source: stsbl-backend-server
+Section: misc
+Priority: optional
+Maintainer: Stadtteilschule Blankenese <repository@stsbl.de>
+Build-Depends: debhelper (>= 10)
+Build-Depends-Indep: iserv3-dev
+Standards-Version: 4.5.0
+
+Package: stsbl-backend-server
+Architecture: all
+Depends: ${misc:Depends},
+  ${perl:Depends},
+  avahi-utils,
+  bash-completion,
+  busybox-static,
+  command-not-found,
+  console-setup,
+  dosfstools,
+  eject,
+  git,
+  iserv-avahi,
+  iserv-backup2-client,
+  iserv-config,
+  iserv-config-file,
+  iserv-netmon,
+  iserv-regdns,
+  iserv-server-ferm,
+  iserv-ssl,
+  iserv-update,
+  iserv-utils-nonfree,
+  keyboard-configuration,
+  kpartx,
+  libnss-mdns,
+  libnss-myhostname,
+  libpam-systemd,
+  stsbl-iserv-config-ipv6,
+  stsbl-iserv-cron-reload,
+  stsbl-iserv-dev-vim,
+  stsbl-iserv-gnupg-forwarding,
+# install stsbl-iserv-server-systemd-resolve unless we have portal already
+# installed
+  stsbl-iserv-server-systemd-resolved | iserv-portal,
+  stsbl-iserv-usrmerge,
+  stsbl-keyring,
+  stsbl-repoconfig,
+  traceroute,
+Provides: iserv-server,
+Description: Stadtteilschule Blankenese: Backend-Server
+ Konfiguration und Abhängigkeiten für die IServ-basierten
+ Server der Stadtteilschule Blankenese.
+Tag: suite::iserv, role::server

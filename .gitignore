@@ -1,0 +1,6 @@
+debian/stsbl-backend-server/*
+debian/stsbl-backend-server.substvars
+debian/stsbl-backend-server.debhelper.log
+debian/files
+debian/debhelper-build-stamp
+debian/*.debhelper
