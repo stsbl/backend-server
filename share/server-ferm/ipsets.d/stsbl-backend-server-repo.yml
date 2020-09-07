@@ -1,0 +1,6 @@
+Files:
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-host-repository
+Directories: ~
+Type: "hash:ip"
+ExecFetch: ~
+

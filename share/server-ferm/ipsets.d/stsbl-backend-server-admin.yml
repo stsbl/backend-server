@@ -1,0 +1,10 @@
+Files:
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-admin
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-ipsecvpn
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-openvpn
+  # Portal needs to be trusted as it acts as transparent proxy for several networks
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-host-iserv
+Directories: ~
+Type: "hash:net"
+ExecFetch: ~
+

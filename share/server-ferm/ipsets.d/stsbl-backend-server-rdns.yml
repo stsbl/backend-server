@@ -1,0 +1,6 @@
+Files:
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-host-rdns
+Directories: ~
+Type: "hash:ip"
+ExecFetch: ~
+

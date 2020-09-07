@@ -1,0 +1,11 @@
+Files:
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-host-iserv
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-admin
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-byod
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-ipsecvpn
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-lan
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-unknown
+Directories: ~
+Type: "hash:net"
+ExecFetch: ~
+

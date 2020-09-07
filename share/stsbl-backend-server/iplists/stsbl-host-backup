@@ -1,0 +1,13 @@
+# List of stsbl.de backup system IP addresses
+# backup1.stsbl.de
+10.1.0.2
+2001:470:539f:1001:6d4:c4ff:fef3:3a45
+2001:470:539f:1001::2
+fda9:b38a:2445:1001:6d4:c4ff:fef3:3a45
+fda9:b38a:2445:1001::2
+# backup2.stsbl.de
+10.1.0.3
+2001:470:539f:1001:215:5dff:feeb:8704
+2001:470:539f:1001::3
+fda9:b38a:2445:1001:215:5dff:feeb:8704
+fda9:b38a:2445:1001::3

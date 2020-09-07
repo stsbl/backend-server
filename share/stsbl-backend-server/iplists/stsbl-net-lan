@@ -1,0 +1,17 @@
+# List of Stadtteilschule Blankenese networks used for devices owned by school
+# Pädagogisches Netz
+10.0.0.0/16
+2001:470:539f:1000::/64
+fda9:b38a:2445:1000::/64
+# Server
+10.1.0.0/16
+2001:470:539f:1001::/64
+fda9:b38a:2445:1001::/64
+# Beamer/TV
+10.2.0.0/16
+2001:470:539f:1002::/64
+fda9:b38a:2445:1002::/64
+# Drucker
+10.3.0.0/16
+2001:470:539f:1003::/64
+fda9:b38a:2445:1003::/64

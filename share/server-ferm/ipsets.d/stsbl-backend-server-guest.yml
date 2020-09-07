@@ -1,0 +1,6 @@
+Files:
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-guest
+Directories: ~
+Type: "hash:net"
+ExecFetch: ~
+

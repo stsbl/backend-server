@@ -1,0 +1,5 @@
+# List of Stadtteilschule Blankenese networks used for DMZ
+# DMZ Frahmstraße
+172.17.0.0/16
+2001:539f:470:17::/64
+fda9:b38a:2445:17::/64
