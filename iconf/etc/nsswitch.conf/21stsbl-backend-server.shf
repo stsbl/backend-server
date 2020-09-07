@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sed -E -r \
+  -e '/^hosts:/ {
+  s/(files)/\1 myhostname/
+}' \
+  -e '/^hosts:/ {
+  s/(myhostname)/\1 mdns4_minimal \[NOTFOUND=return\]/ 
+}' \
+|| cat
+true
