@@ -1,0 +1,12 @@
+  # Taken from Portal: write orphaned mails to mbox in /var/mail/
+  # Felix Jacobi <felix.jacobi@stsbl.de>
+  mail_file:
+    driver = appendfile
+    file   = /var/mail/${local_part}
+    home_directory = /var/mail
+    user = ${if eq{${local_part}}{root}{mail}{${local_part}}}
+    group = mail
+    delivery_date_add
+    envelope_to_add
+    return_path_add
+

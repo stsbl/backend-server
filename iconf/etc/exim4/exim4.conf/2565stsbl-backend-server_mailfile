@@ -1,0 +1,8 @@
+  # Taken from Portal: send orphaned mail to mailbox /var/mail/root
+  # Felix Jacobi <felix.jacobi@stsbl.de>
+  check_mail_user:
+    driver = accept
+    check_local_user
+    condition = ${if eq{"$local_part"}{"root"}{true}{false}}
+    transport = mail_file
+

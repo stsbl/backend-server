@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+
+sed -E -r 's/^(local_interfaces)/# Disable binding only to lo, access is controlled by firewall\
+# Felix Jacobi <felix.jacobi@stsbl.de>\
+#\1/g'
