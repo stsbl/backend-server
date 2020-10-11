@@ -1,0 +1,4 @@
+# Allow backend server administrators of Stadtteilschule Blankenese to use
+# their IServ remote-support accounts
+allow iserv-felix.jacobi
+
