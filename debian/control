@@ -44,6 +44,7 @@ Depends: ${misc:Depends},
   stsbl-keyring,
   stsbl-repoconfig,
   traceroute,
+  zsh,
 Provides: iserv-server,
 Description: Stadtteilschule Blankenese: Backend-Server
  Konfiguration und Abhängigkeiten für die IServ-basierten

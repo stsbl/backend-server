@@ -1,0 +1,28 @@
+Test "move /tmp to tmpfs"
+  mountpoint -q /tmp
+  ---
+  set -e
+  shopt -s nullglob
+  if ! grep -qE '^tmpfs\s+/tmp\s+' /etc/fstab
+  then
+    echo 'tmpfs					/tmp		tmpfs	nosuid		0	0' >> /etc/fstab
+  fi
+  mkdir -p /tmp.move
+  if find /tmp -mindepth 1 | grep -q .
+  then
+    zsh -c 'mv /tmp/* /tmp.move/'
+  fi
+  if find /tmp -mindepth 1 | grep -q .
+  then
+    zsh -c 'mv /tmp/.* /tmp.move/'
+  fi
+  mount /tmp
+  if find /tmp.move -mindepth 1 | grep -q .
+  then
+    zsh -c 'mv /tmp.move/* /tmp/'
+  fi
+  if find /tmp.move -mindepth 1 | grep -q .
+  then
+    zsh -c 'mv /tmp.move/.* /tmp/'
+  fi
+  rmdir /tmp.move
