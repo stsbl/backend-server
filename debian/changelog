@@ -1,3 +1,17 @@
+stsbl-backend-server (20.10.12-1) stable; urgency=medium
+
+  * Added alternative dependency for servers acting as authorative
+    nameserver
+  * Added nsswitch.conf changes
+  * Added iservchk script for root alias
+  * Added several IP lists and sets
+  * Added control VLAN
+  * Added moving /tmp to ramfs
+  * Added customized exim4.conf
+  * Added remote-support entries
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Mon, 12 Oct 2020 01:19:51 +0200
+
 stsbl-backend-server (20.09.07-1) unstable; urgency=medium
 
   * Initial Release.
