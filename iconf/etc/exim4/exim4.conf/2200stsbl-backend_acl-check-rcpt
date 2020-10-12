@@ -1,0 +1,21 @@
+  # Subset of check_rcpt ACL imported from Portal
+  # Felix Jacobi <felix.jacobi@stsbl.de>
+  acl_check_rcpt:
+    deny
+      !verify = sender
+
+    require
+      verify = recipient
+
+    # Der Rest darf nur an lokale Domains zustellen
+    require
+      message = relay not permitted
+      domains = +local_domains
+
+    # Prüfen, ob von der IP überhaupt Mails mit der angegebenen Domain
+    # verschickt werden dürfen
+    require
+      verify = csa
+
+    accept
+

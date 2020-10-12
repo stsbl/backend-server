@@ -1,0 +1,13 @@
+  # Subset of check_mail ACL imported from Portal
+  # Felix Jacobi <felix.jacobi@stsbl.de>
+  acl_check_mail:
+    # Mails mit Absender @localhost nur annehmen, wenn sie wirklich von
+    # localhost kommen. Spammails verwenden nämlich manchmal @localhost als
+    # Absender, was bei Bounces oder Vacation-Antworten zu sehr verwirrenden
+    # Mails an die Admins schickt.
+    deny
+      sender_domains = localhost
+      !hosts = 127.0.0.1 : ::1
+
+    accept
+
