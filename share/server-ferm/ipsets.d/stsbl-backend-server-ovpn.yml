@@ -1,0 +1,6 @@
+Files:
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-openvpn 
+Directories: ~
+Type: "hash:net"
+ExecFetch: ~
+
