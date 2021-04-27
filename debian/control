@@ -36,10 +36,7 @@ Depends: avahi-utils,
          stsbl-iserv-cron-reload,
          stsbl-iserv-dev-vim,
          stsbl-iserv-gnupg-forwarding,
-# install stsbl-iserv-server-systemd-resolve unless we have portal already
-# installed
          stsbl-iserv-server-systemd-resolved | stsbl-iserv-dns-over-tls | iserv-portal,
-         stsbl-iserv-usrmerge,
          stsbl-keyring,
          stsbl-repoconfig,
          traceroute,
