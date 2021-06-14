@@ -3,6 +3,7 @@ Test "add root alias"
       grep -q '^root: ' /etc/aliases
    ---
    echo 'root: ' >> /etc/aliases
+   newaliases
 
 Test "forward root to root@stsbl.de"
   ! [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
@@ -22,7 +23,8 @@ Test "forward root to root@stsbl.de"
         return $line . ", root@stsbl.de";
       }
       s/^(root:\s+)(.*)/$1.insert($2)/e;
-      ' /etc/nsswitch.conf
+      ' /etc/aliases
+   newaliases
 
 Test "forward root to itself"
   ! [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
@@ -42,4 +44,6 @@ Test "forward root to itself"
         return $line . ", root";
       }
       s/^(root:\s+)(.*)/$1.insert($2)/e;
-      ' /etc/nsswitch.conf
+      ' /etc/aliases
+   newaliases
+

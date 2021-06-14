@@ -26,3 +26,4 @@ Test "move /tmp to tmpfs"
     zsh -c 'mv /tmp.move/.* /tmp/'
   fi
   rmdir /tmp.move
+
