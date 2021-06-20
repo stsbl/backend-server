@@ -1,3 +1,9 @@
+stsbl-backend-server (21.06.20.2) stable; urgency=medium
+
+  * Fixed homepage
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Sun, 20 Jun 2021 18:19:41 +0200
+
 stsbl-backend-server (21.06.20.1) stable; urgency=medium
 
   * Fixed typo
