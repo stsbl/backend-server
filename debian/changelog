@@ -1,3 +1,10 @@
+stsbl-backend-server (21.07.09.1) stable; urgency=medium
+
+  * Prepare to allow SSH only from IServ GmbH, private networks and
+    Stadtteilschule Blankenese local network
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Fri, 09 Jul 2021 02:48:33 +0200
+
 stsbl-backend-server (21.06.20.2) stable; urgency=medium
 
   * Fixed homepage
