@@ -1,0 +1,9 @@
+domain (ip ip6) {
+  table filter {
+    chain INPUT {
+      @if @eq($DOMAIN, ip) mod set set stsbl-backend-server-local src jump input_stsbl;
+      @if @eq($DOMAIN, ip6) mod set set stsbl-backend-server-local6 src jump input_stsbl;
+    }
+  }
+}
+
