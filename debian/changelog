@@ -1,3 +1,9 @@
+stsbl-backend-server (21.08.17.1) stable; urgency=medium
+
+  * Switched to git source format
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Tue, 17 Aug 2021 22:44:15 +0200
+
 stsbl-backend-server (21.07.30.1) stable; urgency=medium
 
   * Updated host-iserv iplist
