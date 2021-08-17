@@ -10,3 +10,15 @@ domain (ip6) {
   }
 }
 
+# Respond to traceroute requests
+# UDP
+domain (ip ip6) table filter chain input_stsbl proto udp dport 33434:33474 ACCEPT;
+# Not required yet, needs server-ferms adjustment
+# ICMP
+# icmp-type 8 => icmp-type echo-request
+#domain (ip) table filter chain input_stsbl proto icmp icmp-type 8 ACCEPT;
+# ICMPv6
+# icmpv6-type 128 => icmpv6-type echo-request
+#domain (ip6) table filter chain input_stsbl proto icmpv6 icmpv6-type 128 ACCEPT;
+
+
