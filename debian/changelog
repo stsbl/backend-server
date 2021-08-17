@@ -1,8 +1,8 @@
-stsbl-backend-server (21.08.18-1) stable; urgency=medium
+stsbl-backend-server (21.08.18.1) stable; urgency=medium
 
   * Make UDP traceroute work from local network again
 
- -- Stadtteilschule Blankenese <repository@stsbl.de>  Wed, 18 Aug 2021 01:26:24 +0200
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Wed, 18 Aug 2021 01:28:29 +0200
 
 stsbl-backend-server (21.08.17.1) stable; urgency=medium
 
