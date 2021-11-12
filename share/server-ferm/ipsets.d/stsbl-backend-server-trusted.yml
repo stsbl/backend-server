@@ -1,0 +1,7 @@
+---
+Files:
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-trusted
+Directories: ~
+Type: "hash:net"
+ExecFetch: ~
+
