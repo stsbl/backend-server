@@ -8,6 +8,22 @@ Homepage: https://it.stsbl.de/
 
 Package: stsbl-backend-server
 Architecture: all
+Depends: gruelag-remotesupport,
+         stsbl-bacend-server-common,
+         ${misc:Depends},
+         ${perl:Depends}
+Provides: iserv-server
+Description: Stadtteilschule Blankenese: Backend-Server
+ Konfiguration und Abhängigkeiten für die IServ-basierten
+ Server der Stadtteilschule Blankenese.
+ .
+ Konfiguration der gemeinsamen Abhängigkeiten und des Fernwartungszugriffs.
+Tag: suite::iserv, role::server
+
+Package: stsbl-backend-server-common
+Architecture: all
+Breaks: stsbl-backend-server (<< 21.12.14),
+Replaces: stsbl-backend-server (<< 21.12.14),
 Depends: avahi-utils,
          bash-completion,
          busybox-static,
@@ -16,7 +32,6 @@ Depends: avahi-utils,
          dosfstools,
          eject,
          git,
-         gruelag-remotesupport,
          iserv-avahi,
          iserv-backup2-client,
          iserv-config,
@@ -49,4 +64,6 @@ Provides: iserv-server
 Description: Stadtteilschule Blankenese: Backend-Server
  Konfiguration und Abhängigkeiten für die IServ-basierten
  Server der Stadtteilschule Blankenese.
+ .
+ Gemeinsame Abhängigkeiten und Konfiguration ohne Fernwartungszugriff.
 Tag: suite::iserv, role::server
