@@ -9,7 +9,7 @@ Homepage: https://it.stsbl.de/
 Package: stsbl-backend-server
 Architecture: all
 Depends: gruelag-remotesupport,
-         stsbl-bacend-server-common,
+         stsbl-backend-server-common,
          ${misc:Depends},
          ${perl:Depends}
 Provides: iserv-server
