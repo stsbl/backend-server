@@ -1,5 +1,5 @@
 Test "add root alias"
-  [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
+  ! [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
      grep -q '^root: ' /etc/aliases
   ---
   echo 'root: ' >> /etc/aliases
