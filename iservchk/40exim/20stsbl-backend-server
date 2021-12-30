@@ -1,49 +1,21 @@
 Test "add root alias"
-   [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
-      grep -q '^root: ' /etc/aliases
-   ---
-   echo 'root: ' >> /etc/aliases
-   newaliases
+  [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
+     grep -q '^root: ' /etc/aliases
+  ---
+  echo 'root: ' >> /etc/aliases
+  newaliases
 
 Test "forward root to root@stsbl.de"
   ! [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
       grep '^root:.*\broot@stsbl.de\b' /etc/aliases
   ---
-  perl -i -pe '
-      sub insert {
-        my $line = shift;
-        # this also splits on tab
-        my @bits=split(", ", $line);
-        # do not break configuration if the "root" line already references
-        # root@stsbl.de
-        if (grep { $_ eq "root@stsbl.de"} @bits) {
-            return $line;
-        }
-        # add root@stsbl.de at the end
-        return $line . ", root@stsbl.de";
-      }
-      s/^(root:\s+)(.*)/$1.insert($2)/e;
-      ' /etc/aliases
-   newaliases
+  /usr/lib/iserv/stsbl-backend-server/add_alias /etc/aliases root root@stsbl.de
+  newaliases
 
 Test "forward root to itself"
   ! [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
       grep '^root:.*\broot\b' /etc/aliases
   ---
-  perl -i -pe '
-      sub insert {
-        my $line = shift;
-        # this also splits on tab
-        my @bits=split(", ", $line);
-        # do not break configuration if the "root" line already references
-        # root
-        if (grep { $_ eq "root"} @bits) {
-            return $line;
-        }
-        # add root at the end
-        return $line . ", root";
-      }
-      s/^(root:\s+)(.*)/$1.insert($2)/e;
-      ' /etc/aliases
-   newaliases
+  /usr/lib/iserv/stsbl-backend-server/add_alias /etc/aliases root root
+  newaliases
 

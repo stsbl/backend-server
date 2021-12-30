@@ -1,0 +1,44 @@
+#!/usr/bin/perl -CSDAL
+
+use warnings;
+use strict;
+
+$ARGV[0] or die "usage: $0 file alias address\n";
+$ARGV[1] or die "usage: $0 file alias address\n";
+$ARGV[2] or die "usage: $0 file alias address\n";
+
+sub insert {
+  my $line = shift;
+  chomp $line;
+  # this also splits on tab
+  my @bits = split(/,\s*/, $line);
+  # do not break configuration if the "root" line already references
+  # $ARGV[0]
+  if (grep { $_ eq $ARGV[2]} @bits) {
+      return $line;
+  }
+  # add root@stsbl.de at the end
+  push @bits, $ARGV[2];
+  return " " . join(", ", @bits);
+}
+
+my @out;
+open IN, "+<", $ARGV[0] or die "open: $!\n";
+
+while (<IN>)
+{
+  chomp $_;
+  s/^(\Q$ARGV[1]\E:)\s*(.*)$/$1.insert($2)/e;
+  push @out, "$_\n";
+}
+
+system "backup", $ARGV[0];
+seek IN, 0, 0 or die "seek: $!\n";
+truncate IN, 0 or die "truncate: $!\n";
+
+for (@out)
+{
+  print IN $_;
+}
+
+close IN;
