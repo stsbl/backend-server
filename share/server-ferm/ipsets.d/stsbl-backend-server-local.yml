@@ -10,6 +10,7 @@ Files:
   - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-management
   - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-openvpn
   - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-unknown
+  - /usr/share/iserv/stsbl-backend-server/iplists/stsbl-net-vm
 Directories: ~
 Type: "hash:net"
 ExecFetch: ~
