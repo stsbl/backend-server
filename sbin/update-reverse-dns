@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+if [ -z "$1" ] || [ "$1" = "--help" ] || [ "$1" = "-h" ]
+then
+  echo "Usage: $0 rdns-hostname"
+  echo
+  echo "You must be able to connect as privileged user to rnds-hostname via SSH!"
+fi
+
+netquery6 -gu ip | grep -vx "fd00::53" | ssh "$1" apply-reserve-dns "$(hostname)"
