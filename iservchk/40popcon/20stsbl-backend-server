@@ -1,0 +1,15 @@
+Test "participate in popularity-contest"
+  [ "$(debconf-get-selections | awk '$1 == "popularity-contest" && $2 == "popularity-contest/participate" { print $4 }')" = "true" ]
+  ---
+  echo 'popularity-contest	popularity-contest/participate	boolean	true' | debconf-set-selections
+
+Test "set PARTICIPATE in /etc/popularity-contest.conf"
+  grep -qx 'PARTICIPATE="yes"' /etc/popularity-contest.conf
+  ---
+  if grep -q '^PARTICIPATE=' /etc/popularity-contest.conf
+  then
+    sed -i 's/^PARTICIPATE=.*$/PARTICIPATE="yes"/g' /etc/popularity-contest.conf
+  else
+    echo 'PARTICIPATE="yes"' >> /etc/popularity-contest.conf
+  fi
+
