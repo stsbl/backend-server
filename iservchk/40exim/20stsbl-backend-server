@@ -1,8 +1,8 @@
 Test "add root alias"
   ! [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
-     grep -q '^root: ' /etc/aliases
+     grep -q '^root:\s*' /etc/aliases
   ---
-  grep -q '^root:\s*' /etc/aliases
+  echo 'root: ' >> /etc/aliases
   newaliases
 
 Test "forward root to root@stsbl.de"
