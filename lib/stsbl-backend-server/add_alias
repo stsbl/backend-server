@@ -19,7 +19,7 @@ sub insert {
   }
   # add root@stsbl.de at the end
   push @bits, $ARGV[2];
-  return " " . join(", ", @bits);
+  return join(", ", @bits);
 }
 
 my @out;
@@ -28,7 +28,7 @@ open IN, "+<", $ARGV[0] or die "open: $!\n";
 while (<IN>)
 {
   chomp $_;
-  s/^(\Q$ARGV[1]\E:)\s*(.*)$/$1.insert($2)/e;
+  s/^(\Q$ARGV[1]\E:)(\s*)(.*)$/$1.$2.insert($3)/e;
   push @out, "$_\n";
 }
 

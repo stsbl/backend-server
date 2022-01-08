@@ -2,19 +2,19 @@ Test "add root alias"
   ! [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
      grep -q '^root: ' /etc/aliases
   ---
-  echo 'root: ' >> /etc/aliases
+  grep -q '^root:\s*' /etc/aliases
   newaliases
 
 Test "forward root to root@stsbl.de"
   ! [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
-      grep '^root:.*\broot@stsbl.de\b' /etc/aliases
+     grep -qE '^root:.*\broot@stsbl.de($|,)' /etc/aliases
   ---
   /usr/lib/iserv/stsbl-backend-server/add_alias /etc/aliases root root@stsbl.de
   newaliases
 
 Test "forward root to itself"
   ! [ "$Domain" = "stsbl.de" ] || [ "$Hostname" = "iserv.stsbl.de" ] ||
-      grep '^root:.*\broot\b' /etc/aliases
+     grep -qE '^root:.*\broot($|,)' /etc/aliases
   ---
   /usr/lib/iserv/stsbl-backend-server/add_alias /etc/aliases root root
   newaliases
