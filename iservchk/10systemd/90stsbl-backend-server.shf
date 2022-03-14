@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sed -E '/^# Remove after start to avoid recreation$/d' |
+sed -E '/^Remove-R \/var\/log\/journal$/d'

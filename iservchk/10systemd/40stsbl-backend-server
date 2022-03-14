@@ -1,0 +1,2 @@
+MkDir 2755 root:systemd-journal /var/log/journal
+
