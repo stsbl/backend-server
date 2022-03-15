@@ -1,3 +1,10 @@
+stsbl-backend-server (22.03.15.1) stable; urgency=medium
+
+  * Fixed activating persistent systemd-journal
+  * Configured journald retention
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Tue, 15 Mar 2022 21:19:33 +0100
+
 stsbl-backend-server (22.03.14.1) stable; urgency=medium
 
   * Enabled persistent systemd journal
