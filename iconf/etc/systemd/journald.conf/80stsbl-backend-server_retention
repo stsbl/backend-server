@@ -1,0 +1,6 @@
+# Keep Logs no longer than 7 days
+MaxRetentionSec=7d
+# Rotate Log files twice per day
+# (defaults to 1 month, would clear all logs on 7 day limit)
+MaxFileSec=12h
+
