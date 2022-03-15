@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+
+rmdir_if_existent()
+{
+  if [ -d "$1" ]
+  then
+    rmdir --ignore-fail-on-non-empty "$1"
+  fi
+}
+
+if [ "$1" = "purge" ] || [ "$1" = "remove" ]
+then
+  rm -f /etc/systemd/journal.conf.d/iserv-update.conf
+  rmdir_if_existent /etc/systemd/journal.conf.d
+  systemctl try-restart systemd-journald || true
+fi
+
+#DEBHELPER#
