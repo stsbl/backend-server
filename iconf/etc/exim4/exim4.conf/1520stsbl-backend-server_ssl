@@ -1,7 +1,3 @@
-# Use a real SSL certifcate
-# Felix Jacobi <felix.jacobi@stsbl.de>
-tls_advertise_hosts = *
-tls_certificate = /etc/ssl/certs/iserv.combined
-tls_privatekey = /etc/ssl/private/iserv.key
+# Enable TLS connections on Port 465
 tls_on_connect_ports = 465
 
