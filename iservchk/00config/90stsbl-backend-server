@@ -1,0 +1,6 @@
+Test "VerboseUpdates on"
+  [ "$VerboseUpdates" ]
+  ---
+  store_cfg /etc/iserv/config VerboseUpdates true
+  /usr/lib/iserv/newconf
+
