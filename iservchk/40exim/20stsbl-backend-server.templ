@@ -1,0 +1,21 @@
+Test "add root alias"
+  [ "\$Hostname" = "iserv.\$(hostname -d)" ] ||
+     grep -q '^root:\s*' /etc/aliases
+  ---
+  echo 'root: ' >> /etc/aliases
+  newaliases
+
+Test "forward root to root@$(hostname -d)"
+  [ "\$Hostname" = "iserv.\$(hostname -d)" ] ||
+     grep -qE '^root:.*\broot@'"\$(hostname -d)"'($|,)' /etc/aliases
+  ---
+  /usr/lib/iserv/stsbl-backend-server/add_alias /etc/aliases root "root@\$(hostname -d)"
+  newaliases
+
+Test "forward root to itself"
+  [ "\$Hostname" = "iserv.\$(hostname -d)" ] ||
+     grep -qE '^root:.*\broot($|,)' /etc/aliases
+  ---
+  /usr/lib/iserv/stsbl-backend-server/add_alias /etc/aliases root root
+  newaliases
+
