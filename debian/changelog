@@ -1,3 +1,11 @@
+stsbl-backend-server (22.11.26.1) stable; urgency=medium
+
+  * iservchk exim: Enable root mail forwarding for all domains
+  * Added iservchk script to enable verbose updates
+  * Added dependency on gnupg
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Sat, 26 Nov 2022 01:08:18 +0100
+
 stsbl-backend-server (22.09.18.1) stable; urgency=medium
 
   * Added dependency to iserv-server-fail2ban
