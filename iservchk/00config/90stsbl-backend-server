@@ -4,3 +4,8 @@ Test "VerboseUpdates on"
   store_cfg /etc/iserv/config VerboseUpdates true
   /usr/lib/iserv/newconf
 
+Test "install stsbl-iserv-secureboot"
+  ! [ -d "/sys/firmware/efi" ] || iservpkginstalled stsbl-iserv-secureboot
+  ---
+  /usr/lib/iserv/apt-get_auto install stsbl-iserv-secureboot
+
