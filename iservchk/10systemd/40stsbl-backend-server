@@ -1,6 +1,8 @@
 MkDir 2755 root:systemd-journal /var/log/journal
 
+# Fixed typo from the past
+Remove-R /etc/systemd/journal.conf.d
 # Disable forced volatile journal by iserv-update
-MkDir 0755 root:root /etc/systemd/journal.conf.d
-Link /dev/null /etc/systemd/journal.conf.d/iserv-update.conf
+MkDir 0755 root:root /etc/systemd/journald.conf.d
+Link /dev/null /etc/systemd/journald.conf.d/iserv-update.conf
 
