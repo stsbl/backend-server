@@ -1,3 +1,10 @@
+stsbl-backend-server (23.09.18.1) stable; urgency=medium
+
+  * Updated .gitignore
+  * Updated DNS server dependencies
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Mon, 18 Sep 2023 05:48:50 +0200
+
 stsbl-backend-server (23.06.02.1) stable; urgency=medium
 
   * Added lldpd
