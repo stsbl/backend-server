@@ -1,8 +1,7 @@
 # List of repository.stsbl.de IP addresses
 172.17.0.4
-2001:470:539f::4
-2a0e:97c0:d20::4
-2001:470:539f::acff:fe11:ff04
-2a0e:97c0:d20::acff:fe11:ff04
-fda9:b38a:2445::4
-fda9:b38a:2445::acff:fe11:ff04
+2a0e:97c0:d20:17::4
+2a0e:97c0:d20:ffff::4
+2a0e:97c0:d20:17:0:acff:fe11:ff04
+fda9:b38a:2445:17::4
+fda9:b38a:2445:17:0:acff:fe11:ff04

@@ -1,6 +1,5 @@
 # List of Stadtteilschule Blankenese networks used for controlling devices
 # Control Frahmstraße
 172.23.0.0/16
-2001:470:539f:23::/64
 2a0e:97c0:d20:23::/64
 fda9:b38a:2445:23::/64

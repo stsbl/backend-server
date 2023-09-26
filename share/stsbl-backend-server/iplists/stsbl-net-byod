@@ -1,16 +1,13 @@
 # List of Stadtteilschule Blankenese networks used for BYOD devices
 # BYOD Lehrer
 10.10.0.0/16
-2001:470:539f:1010::/64
 2a0e:97c0:d20:1010::/64
 fda9:b38a:2445:1010::/64
 # BYOD Schüler
 10.11.0.0/16
-2001:470:539f:1011::/64
 2a0e:97c0:d20:1011::/64
 fda9:b38a:2445:1011::/64
 # Captiveportal
 10.18.0.0/16
-2001:470:539f:1018::/64
 2a0e:97c0:d20:1018::/64
 fda9:b38a:2445:1018::/64
