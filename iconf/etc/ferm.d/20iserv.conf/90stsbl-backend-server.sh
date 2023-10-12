@@ -1,8 +1,7 @@
 #!/bin/sh
 
-# Restrict SSH on hosts under stsbl.de to local network except for
-# router.stsbl.de which acts as safe habour for broken VPN for now
-if [ "$(hostname -d)" = "stsbl.de" ] && ! [ "$(hostname)" = "router.stsbl.de" ]
+# Restrict SSH on hosts under stsbl.de to local network
+if [ "$(hostname -d)" = "stsbl.de" ]
 then
   cat <<EOT
 # Return before server-ferm SSH accept

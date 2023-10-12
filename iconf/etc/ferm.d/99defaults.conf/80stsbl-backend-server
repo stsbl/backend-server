@@ -1,9 +1,2 @@
-domain (ip ip6) {
-  table filter {
-    chain input_stsbl {           
-      proto tcp dport ssh ACCEPT;
-    }
-
-  }
-}
+domain (ip ip6) table filter chain input_stsbl proto tcp dport ssh ACCEPT;
 

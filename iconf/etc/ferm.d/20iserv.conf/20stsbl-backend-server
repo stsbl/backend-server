@@ -1,15 +1,3 @@
-# Allow Portal to deliver mails to servers behind it
-domain (ip) {
-  chain input_world {
-    mod set set stsbl-backend-server-portal src proto tcp dport (smtp submission urd) ACCEPT;
-  }
-}
-domain (ip6) {
-  chain input_world {
-    mod set set stsbl-backend-server-portal6 src proto tcp dport (smtp submission urd) ACCEPT;
-  }
-}
-
 # Respond to traceroute requests
 # UDP
 domain (ip ip6) table filter chain input_stsbl proto udp dport 33434:33474 ACCEPT;
