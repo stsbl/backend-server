@@ -1,3 +1,10 @@
+stsbl-backend-server (24.03.03.1) stable; urgency=medium
+
+  * Iservmake: Disabled Pootle download
+  * Added remotesupport-list dependency
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Sun, 03 Mar 2024 23:49:51 +0100
+
 stsbl-backend-server (23.10.12.1) stable; urgency=medium
 
   * Restrict SSH access to router.stsbl.de to trusted networks
