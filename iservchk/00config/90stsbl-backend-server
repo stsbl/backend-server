@@ -2,7 +2,7 @@ Test "set DropbearAuthorizedAccounts"
   [ "$(hostname -d)" = "stsbl.de" ] || exit 0
   ! iservpkginstalled stsbl-iserv-cryptsetup ||
     ! iservpkginstalled iserv-config-file ||
-    ! { [ "$(hostname -d)" = "jacobi-bs.de" ] ||
+    { [ "$(hostname -d)" = "jacobi-bs.de" ] ||
         [ "$(hostname -d)" = "jacobi-hamburg.net" ] ||
         [ "$(hostname -d)" = "felix.iserv.dev" ]; } ||
     {
