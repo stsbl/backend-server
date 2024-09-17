@@ -1,3 +1,9 @@
+stsbl-backend-server (24.09.17.1) testing; urgency=medium
+
+  * stsbl-net-trusted: Updated
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Tue, 17 Sep 2024 05:58:35 +0200
+
 stsbl-backend-server (24.07.21.1) testing; urgency=medium
 
   * stsbl-net-trusted: Added sshgw.jacobi-bs.de
