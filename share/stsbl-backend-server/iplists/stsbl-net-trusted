@@ -1,10 +1,21 @@
 # dsl.jacobi-bs.de
 ## Office
 2003:a:838:8f00::/64
+80.153.184.199
 ## VPN
 2003:a:838:8f16::/64
-80.153.184.199
+192.168.16.0/24
+## Wireguard VPN
+2003:a:838:8f26::/64
+192.168.26.0/24
+# Gateway networks
 # sshgw.jacobi-bs.de
 5.9.193.174/32
+# vpngw.jacobi-bs.de
+5.9.193.175/32
+# vpngw.jacobi-bs.de Wireguard
+192.168.216.0/24
+2a01:4f8:212:f716::/64
+# Sec Gateway networks
 192.168.255.80/28
 2a01:4f8:212:f7a5::/64
