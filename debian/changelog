@@ -1,3 +1,10 @@
+stsbl-backend-server (24.10.20.1) testing; urgency=medium
+
+  * Added new networks Veranstaltungstechnik, Haustechnik and new IP range
+    for DMZ IServ according to schema
+
+ -- Felix Jacobi <Felix@jacobi-hamburg.net>  Sun, 20 Oct 2024 23:44:39 +0200
+
 stsbl-backend-server (24.09.17.1) testing; urgency=medium
 
   * stsbl-net-trusted: Updated
